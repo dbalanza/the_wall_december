@@ -1,0 +1,127 @@
+.container {
+  background: #3b3c43;
+  border-radius: 20px;
+  height: 671px;
+  margin: 100px auto;
+  overflow: hidden;
+  position: relative;
+  width: 876px;
+}
+.container::before {
+  background-image: url("../images/right_panel_sign_up_in.svg");
+  background-position: -65px 0px;
+  content: "";
+  height: 385px;
+  position: absolute;
+  right: -3px;
+  top: 42px;
+  width: 208px;
+}
+.container::after {
+  background-image: url("../images/right_panel_the_wall_big_logo.svg");
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  content: "";
+  height: 141px;
+  position: absolute;
+  right: -22px;
+  top: 75px;
+  width: 175px;
+}
+.container form {
+  background: #1d1f2b;
+  height: 100%;
+  padding: 75px 78px;
+  width: 671px;
+}
+.container form .header {
+  margin-bottom: 49px;
+  padding-left: 75px;
+  position: relative;
+}
+.container form .header::before {
+  background-image: url("../images/the_wall_icon.svg");
+  background-repeat: no-repeat;
+  content: "";
+  height: 45px;
+  left: 0px;
+  position: absolute;
+  width: 75px;
+}
+.container form .header h6 {
+  font-size: 21px;
+  font-weight: normal;
+  line-height: 16px;
+  margin-bottom: 7px;
+}
+.container form .header p {
+  color: #6d7186;
+  font-size: 17px;
+  text-align: left;
+}
+.container form .column {
+  display: flex;
+}
+.container form .column label:first-child {
+  margin-right: 15px;
+}
+.container form .column label span {
+  display: inline-block;
+  margin-bottom: 8px;
+}
+.container form #error_text {
+  color: #EB5757;
+  font-size: 14px;
+}
+.container form label {
+  color: #6d7186;
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.container form input {
+  background: #31354f;
+  border-radius: 9px;
+  border: 1px solid transparent;
+  color: #e8e8e9;
+  font-size: 16px;
+  margin-bottom: 17px;
+  outline: none;
+  padding: 20px;
+  width: 100%;
+}
+.container form button {
+  background: #00a3ff;
+  border-radius: 9px;
+  border: none;
+  color: #e8e8e9;
+  font-family: Roboto-Medium;
+  font-size: 21px;
+  margin-bottom: 36px;
+  margin-top: 13px;
+  padding: 18px 0px;
+  width: 100%;
+}
+.container form p {
+  color: #6d7186;
+  font-size: 17px;
+  text-align: center;
+}
+.container form p a {
+  color: #00a3ff;
+  text-decoration: none;
+}
+@media only screen and (max-width: 940px) {
+  .container {
+    height: unset;
+    width: calc(100% - 40px);
+  }
+  .container::before,
+  .container::after {
+    display: none;
+  }
+  .container form {
+    padding: 20px;
+    width: unset;
+  }
+}

@@ -1,0 +1,309 @@
+header {
+  align-items: center;
+  background: #1e1f25;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 25px;
+}
+header div span,
+header div a {
+  font-size: 14px;
+}
+header div a {
+  color: #e8e8e9;
+  margin-left: 23px;
+  position: relative;
+  text-decoration: none;
+}
+header div a::after {
+  background: #3b3c43;
+  content: "";
+  display: inline-block;
+  height: 60px;
+  left: 0px;
+  position: absolute;
+  top: -21px;
+  width: 1px;
+}
+header div a span {
+  margin-left: 26px;
+}
+header div a span:before {
+  background-image: url("../images/the_wall_sprite_icon.svg");
+  background-position: -84px 1px;
+  background-repeat: no-repeat;
+  content: "";
+  display: inline-block;
+  height: 14px;
+  margin-right: 6px;
+  width: 14px;
+}
+.container {
+  margin: 47px auto;
+  width: 978px;
+}
+.container h5 {
+  font-family: Roboto-Normal;
+  font-size: 21px;
+  font-weight: normal;
+  margin-bottom: 7px;
+}
+.container p {
+  color: #6d7186;
+  font-family: Roboto-Normal;
+  font-size: 17px;
+  font-weight: normal;
+}
+.container h6 {
+  font-family: Roboto-Normal;
+  font-size: 16px;
+  font-weight: normal;
+}
+.container textarea {
+  background: #3b3c43;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  color: #e8e8e9;
+  font-family: Roboto-Normal;
+  font-size: 17px;
+  outline: none;
+  padding: 19px 20px;
+  resize: none;
+  width: 100%;
+}
+.container textarea:focus {
+  border: 1px solid #00a3ff;
+}
+.container #add_topic_form {
+  margin: 56px 0px 54px;
+  position: relative;
+}
+.container #add_topic_form button {
+  background: #00a3ff;
+  border-radius: 9px;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 36px;
+  position: absolute;
+  right: 20px;
+  top: 22px;
+}
+.container #add_topic_form button:hover {
+  background: #0050C8;
+}
+.container #topic_list {
+  padding-left: 0px;
+  padding-top: 18px;
+}
+.container #topic_list > li {
+  background: #1e1f25;
+  border-radius: 10px;
+  list-style: none;
+  margin-bottom: 30px;
+  padding: 26px 30px;
+  position: relative;
+}
+.container #topic_list > li#no_post_yet_item {
+  background: transparent !important;
+  border-radius: 9px;
+  border: 1px dashed #6D6E75;
+  font-family: Roboto-Normal;
+  font-size: 16px;
+  margin-top: 56px;
+  padding: 34px 0px;
+  text-align: center;
+}
+.container #topic_list > li .topic_text,
+.container #topic_list > li .comment_text {
+  color: #e8e8e9;
+  font-family: Roboto-Normal;
+  font-size: 16px;
+  font-style: italic;
+  margin-bottom: 0px;
+}
+.container #topic_list > li .comment_text {
+  color: #9496A1;
+}
+.container #topic_list > li .action_container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 19px;
+  position: relative;
+}
+.container #topic_list > li .action_container .response {
+  color: #a3a3ff;
+  font-family: Roboto-Normal;
+  font-size: 14px;
+  left: 0px;
+  margin-top: 16px;
+  position: absolute;
+}
+.container #topic_list > li .action_container .response span.response_count::before {
+  content: "|";
+  margin: 0px 16px;
+}
+.container #topic_list > li .action_container button {
+  border-radius: 0px;
+}
+.container #topic_list > li .action_container button.edit_button,
+.container #topic_list > li .action_container button.delete_button {
+  background-color: #32333C;
+  background-image: url("../images/the_wall_sprite_icon.svg");
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  height: 29px;
+  width: 29px;
+}
+.container #topic_list > li .action_container button.edit_button:hover,
+.container #topic_list > li .action_container button.delete_button:hover {
+  background-color: #a3a3ff;
+}
+.container #topic_list > li .action_container button.edit_button {
+  background-position: 9px 8px;
+  border: 1px solid #606066;
+  margin-right: 6px;
+}
+.container #topic_list > li .action_container button.edit_button:hover {
+  background-position: -34px 7px;
+}
+.container #topic_list > li .action_container button.delete_button {
+  background-position: -13px 8px;
+  height: 27px;
+  width: 27px;
+}
+.container #topic_list > li .action_container button.delete_button:hover {
+  background-position: -55px 7px;
+}
+.container #topic_list > li .action_container .delete_form {
+  align-content: center;
+  background-color: #32333C;
+  border-radius: 4px;
+  border: 1px solid #606066;
+  display: flex;
+}
+.container #topic_list > li .action_container .delete_form.is_open *:not(.delete_button) {
+  align-items: center;
+  display: flex;
+}
+.container #topic_list > li .action_container .delete_form *:not(.delete_button) {
+  display: none;
+}
+.container #topic_list > li .action_container .delete_form button:not(.delete_button) {
+  background: transparent;
+  color: #6d7186;
+  font-size: 10px;
+  margin: 0px 5px;
+  padding: 0px;
+}
+.container #topic_list > li .action_container .delete_form button:not(.delete_button)[type="submit"] {
+  color: #a3a3ff;
+  margin-right: 10px;
+}
+.container #topic_list > li .action_container .delete_form p {
+  align-items: center;
+  border-left: 1px solid #606066;
+  color: #e8e8e9;
+  display: flex;
+  font-size: 10px;
+  margin-right: 10px;
+  padding-left: 10px;
+}
+.container #topic_list > li ul.comment_list {
+  padding-left: 15px;
+}
+.container #topic_list > li ul.comment_list li {
+  list-style: none;
+  padding-bottom: 15px;
+}
+.container #topic_list > li ul.comment_list li .action_container {
+  margin-bottom: 15px;
+}
+.container #topic_list > li ul.comment_list li:last-child .action_container {
+  margin-bottom: 0px;
+}
+.container #topic_list > li ul.comment_list li .topic_text {
+  color: #9496A1;
+}
+.container #topic_list > li ul.comment_list li:not(:last-child) {
+  border-bottom: 1px solid #3F404A;
+  margin-bottom: 27px;
+}
+.container #topic_list > li .comment_form,
+.container #topic_list > li .edit_form {
+  margin-bottom: 24px;
+  margin-left: 15px;
+  position: relative;
+}
+.container #topic_list > li .comment_form textarea,
+.container #topic_list > li .edit_form textarea {
+  min-height: 80px;
+  padding: 11px 20px;
+}
+.container #topic_list > li .comment_form button,
+.container #topic_list > li .edit_form button {
+  background: #00a3ff;
+  border-radius: 9px;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 36px;
+  position: absolute;
+  right: 20px;
+  top: 22px;
+}
+.container #topic_list > li .comment_form button:hover,
+.container #topic_list > li .edit_form button:hover {
+  background: #0050C8;
+}
+@media only screen and (max-width: 1020px) {
+  header {
+    padding: 15px 20px;
+  }
+  header a::after {
+    display: none;
+  }
+  header div > span {
+    display: none;
+  }
+  .container {
+    margin: 0px auto;
+    padding: 46px 30px 35px;
+    width: unset;
+  }
+  .container #add_topic_form button {
+    bottom: 20px;
+    top: unset;
+  }
+  .container textarea {
+    font-size: 14px;
+    min-height: 114px;
+    padding: 20px 20px 10px;
+  }
+  .container #topic_list > li .comment_form,
+  .container #topic_list > li .edit_form {
+    margin-left: 0px;
+  }
+  .container #topic_list > li .edit_form button {
+    top: unset;
+    bottom: 15px;
+  }
+  .container #topic_list > li .edit_icon,
+  .container #topic_list > li .delete_topic_form {
+    z-index: 9;
+  }
+  .container #topic_list > li .topic_text,
+  .container #topic_list > li .comment_text {
+    margin-bottom: 10px;
+  }
+  .container #topic_list > li .action_container {
+    margin-bottom: 36px;
+  }
+  .container #topic_list > li .action_container .response {
+    max-width: calc(100% - 122px);
+    word-break: break-word;
+    white-space: pre-line;
+  }
+  .container #topic_list > li .comment_form button {
+    top: unset;
+    bottom: 23px;
+  }
+}

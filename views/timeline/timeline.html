@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/timeline.css">
+    <meta name="description" content="Timeline of the wall assignment">
+	<link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <meta name="author" content="Demy C. Balanza">
+	<title>The Wall | Timeline</title>
+</head>
+<body>
+    <header>
+        <img src="../../assets/images/the_wall_small_logo.svg" alt="the wall logo">
+        <div>
+            <span>Demy Balanza</span>
+            <a href="./../sign_up_in/sign_in.html"> <span class="logout_icon"></span> Logout</a>
+        </div>
+    </header>
+    <div class="container">
+        <h5>Hello Demy,</h5>
+        <p>Welcome to V88 Forum Dashboard</p>
+        <form id="add_topic_form">
+            <textarea placeholder="Post your Topic..."></textarea>
+            <button type="submit">Post</button>
+        </form>
+        <h6>Recent Forums</h6>
+        <ul id="topic_list">
+            <li id="no_post_yet_item">No post yet.</li>
+        </ul>
+    </div>
+    <div id="clone_container" class="hidden">
+        <ul>
+            <li id="topic_clone_item" class="topic_item">
+                <p class="topic_text"></p>
+                <div class="action_container">
+                    <p class="response"> Demy Balanza <span class="response_time">(few sec ago)</span> <span class="response_count">0 Responses</span></p>
+                    <button type="button" class="edit_button"></button>
+                    <form class="delete_form">
+                        <button type="button" class="delete_button"></button>
+                        <p>Confirm Delete?</p>
+                        <button type="button" class="no_button">No</button>
+                        <button type="submit">Yes</button>
+                    </form>
+                </div>
+                <form class="comment_form">
+                    <textarea placeholder="Post your comment..."></textarea>
+                    <button type="submit">Comment</button>
+                </form>
+                <ul class="comment_list"></ul>
+            </li>
+            <li id="comment_clone_item" class="comment_item">
+                <p class="comment_text"></p>
+                <div class="action_container">
+                    <p class="response"> Demy Balanza (11/20/2022)</p>
+                    <button type="button" class="edit_button"></button>
+                    <form class="delete_form">
+                        <button type="button" class="delete_button"></button>
+                        <p>Confirm Delete?</p>
+                        <button class="no_button" type="button">No</button>
+                        <button type="submit">Yes</button>
+                    </form>
+                </div>
+            </li>
+        </ul>
+        <form id="edit_form_clone" class="edit_form">
+            <textarea name="edit" class="edit_textarea"></textarea>
+            <button type="submit">Save</button>
+        </form>
+    </div>
+    <script src="../../assets/js/constants.js"></script>
+    <script src="../../assets/js/global.js"></script>
+    <script src="../../assets/js/timeline.js"></script>
+</body>
+</html>
